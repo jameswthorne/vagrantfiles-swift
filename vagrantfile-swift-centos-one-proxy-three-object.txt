@@ -101,7 +101,9 @@ set -v
 # Set exit on error
 set -e
 
-yum install -y https://repos.fedorapeople.org/repos/openstack/openstack-icehouse/rdo-release-icehouse-4.noarch.rpm
+yum install -y https://repos.fedorapeople.org/repos/openstack/EOL/openstack-icehouse/rdo-release-icehouse-4.noarch.rpm
+
+sed -i 's$openstack/openstack$openstack/EOL/openstack$g' /etc/yum.repos.d/rdo-release.repo
 
 yum install -y http://dl.fedoraproject.org/pub/epel/6Server/x86_64/epel-release-6-8.noarch.rpm
 
@@ -201,7 +203,9 @@ set -v
 # Set exit on error
 set -e
 
-yum install -y https://repos.fedorapeople.org/repos/openstack/openstack-icehouse/rdo-release-icehouse-4.noarch.rpm
+yum install -y https://repos.fedorapeople.org/repos/openstack/EOL/openstack-icehouse/rdo-release-icehouse-4.noarch.rpm
+
+sed -i 's$openstack/openstack$openstack/EOL/openstack$g' /etc/yum.repos.d/rdo-release.repo
 
 yum install -y http://dl.fedoraproject.org/pub/epel/6Server/x86_64/epel-release-6-8.noarch.rpm
 
